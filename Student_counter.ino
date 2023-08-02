@@ -8,14 +8,14 @@
 #include "addons/RTDBHelper.h"
 
 // Insert your network credentials
-#define WIFI_SSID "DoESLiverpool"
-#define WIFI_PASSWORD "decafbads00"
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
 
 // Insert Firebase project API Key
-#define API_KEY "ByiecarDXxxLsznLQSB4Vv5MQxSiSPVx6q11iNTV"
+#define API_KEY ""
 
 // Insert RTDB URLefine the RTDB URL */
-#define DATABASE_URL "https://iotvoice-9d398-default-rtdb.firebaseio.com/" 
+#define DATABASE_URL "" 
 
 //Define Firebase Data object
 FirebaseData fbdo;
