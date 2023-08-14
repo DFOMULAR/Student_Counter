@@ -14,8 +14,8 @@
 #include <addons/RTDBHelper.h>
 
 /* 1. Define the WiFi credentials */
-#define WIFI_SSID ""
-#define WIFI_PASSWORD ""
+#define WIFI_SSID ""  //input wifi name
+#define WIFI_PASSWORD "" //input wifi password
 
 // For the following credentials, see examples/Authentications/SignInAsUser/EmailPassword/EmailPassword.ino
 
