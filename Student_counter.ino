@@ -20,7 +20,7 @@
 // For the following credentials, see examples/Authentications/SignInAsUser/EmailPassword/EmailPassword.ino
 
 /* 2. Define the API Key */
-#define API_KEY ""
+#define API_KEY ""  //enter your firebase API key here
 
 /* 3. Define the RTDB URL */
 #define DATABASE_URL "" //<databaseName>.firebaseio.com or <databaseName>.<region>.firebasedatabase.app
