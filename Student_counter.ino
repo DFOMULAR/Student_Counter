@@ -1,9 +1,5 @@
 #include <Arduino.h>
-#if defined(ESP32) || defined(ARDUINO_RASPBERRY_PI_PICO_W)
 #include <WiFi.h>
-#elif defined(ESP8266)
-#include <ESP8266WiFi.h>
-#endif
 
 #include <Firebase_ESP_Client.h>
 
@@ -38,10 +34,6 @@ unsigned long sendDataPrevMillis = 0;
 
 int count = 0;
 
-#if defined(ARDUINO_RASPBERRY_PI_PICO_W)
-WiFiMulti multi;
-#endif
-
 //ultrasonic sensor pin_def
 const int t1 = 5;
 const int e1= 18;
@@ -70,12 +62,7 @@ void setup(){
   pinMode(t2, OUTPUT); // Sets the trigPin as an Output
   pinMode(e2, INPUT); // Sets the echoPin as an Input
 
- #if defined(ARDUINO_RASPBERRY_PI_PICO_W)
-  multi.addAP(WIFI_SSID, WIFI_PASSWORD);
-  multi.run();
-#else
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-#endif
 
   Serial.print("Connecting to Wi-Fi");
   unsigned long ms = millis();
@@ -83,10 +70,6 @@ void setup(){
   {
     Serial.print(".");
     delay(300);
-#if defined(ARDUINO_RASPBERRY_PI_PICO_W)
-    if (millis() - ms > 10000)
-      break;
-#endif
   }
   Serial.println();
   Serial.print("Connected with IP: ");
